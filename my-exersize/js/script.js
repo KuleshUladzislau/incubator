@@ -82,3 +82,17 @@ const reverse = (str) => {
 
 
 }
+
+
+// Reverse words 7 kyu
+
+const reverseWords = (str) => {
+    return str.split(' ').map(elem => elem.split('').reverse().join('')).join(' ')
+}
+
+
+
+
+
+
+

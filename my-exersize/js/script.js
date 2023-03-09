@@ -93,6 +93,21 @@ const reverseWords = (str) => {
 
 
 
+// Does my number look big in this? 6 kyu
 
+
+function narcissistic(value) {
+    let b = value.toString().split('');
+    if (value < 10) {
+        return true
+    } else {
+        return value.toString().split('').map(elem => +Math.pow(elem, b.length)).reduce((a, b) => a + b) == value ? true : false
+
+    }
+
+
+
+
+}
 
 

@@ -158,3 +158,26 @@ function checkeredBoard(dimension) {
 }
 
 
+
+// Ciphers #1 - The 01 Cipher 
+
+const encode = (plaintext) => {
+    let alpha = 'abcdefghijklmnopqrstuvwxyz';
+
+
+    let splitText = plaintext.toLocaleLowerCase().split('');
+    console.log(splitText)
+
+    return splitText.map(elem => {
+        if (alpha.split('').indexOf(elem) % 2 === 0) {
+            return 0;
+        } else if (alpha.indexOf(elem) === -1) {
+            return elem;
+        }
+        else {
+            return 1;
+        }
+    }).join('');
+}
+
+

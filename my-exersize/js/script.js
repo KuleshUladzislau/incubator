@@ -139,6 +139,22 @@ function swap(string) {
 }
 
 
+// Checkered Board
 
+
+function checkeredBoard(dimension) {
+    if (parseInt(dimension) !== dimension || dimension < 2) {
+        return false;
+    }
+    var arr = [];
+    for (var i = dimension; i > 0; i--) {
+        var row = [];
+        for (var j = 0; j < dimension; j++) {
+            row.push((i + j) % 2 === 0 ? "□" : "■");
+        }
+        arr.push(row.join(" "));
+    }
+    return arr.join("\n");
+}
 
 

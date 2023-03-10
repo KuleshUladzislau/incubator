@@ -126,3 +126,19 @@ function isPrime(num) {
 }
 
 
+
+// Changing letters 7kyu (10.03.2023 commit);
+function swap(string) {
+    let a = string.split('');
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] === 'a' || a[i] === 'e' || a[i] === 'i' || a[i] === 'u' || a[i] === 'o') {
+            a[i] = a[i].toString().toUpperCase()
+        }
+    }
+    return a.join('')
+}
+
+
+
+
+

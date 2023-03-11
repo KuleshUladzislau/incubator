@@ -248,3 +248,41 @@ try {
 
 }
 
+
+
+
+
+
+// draw me a chessboard second commit 11.03.2023
+
+function chessBoard(rows, columns) {
+    let res = [];
+
+
+
+    for (let i = 0; i < rows; i++) {
+        res[i] = new Array();
+
+        for (let k = 0; k < columns; k++) {
+            if (i % 2 === 0) {
+                if (k % 2 === 0) { res[i].push('O') }
+                else { res[i].push('X') }
+            }
+
+
+            else {
+                if (k % 2 === 0) { res[i].push('X') }
+                else {
+                    res[i].push('O');
+                }
+            }
+
+
+
+        }
+
+
+    }
+    return res;
+}
+

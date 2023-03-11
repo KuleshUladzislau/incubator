@@ -181,3 +181,70 @@ const encode = (plaintext) => {
 }
 
 
+
+// commit 11.03.2023
+
+
+
+// IndexOf Array in Array 6 kyu
+
+
+
+
+const searchArray = (arrayToSearch, query) => {
+
+
+    if (Array.isArray(query) === false) {
+        throw new Error("is not Array");
+    }
+    if (query.length !== 2) {
+        throw new Error("length other than 2");
+
+    }
+    const maxDepth = arr => {
+        return Array.isArray(arr) ? 1 + Math.max(0, ...arr.map(maxDepth)) : 0
+    }
+
+    if (maxDepth(arrayToSearch) !== 2) {
+        throw new Error('arrayToSearch is not two dimensional')
+    }
+    let z = arrayToSearch.filter(elem => elem.length !== 2);
+
+    if (z.length > 0) {
+        throw new Error('sub-Array of arrayToSearch has length other than 2')
+
+    }
+
+
+
+
+
+    let a = arrayToSearch;
+    for (let i = 0; i < a.length; i++) {
+        let count = 0;
+        for (let k = 0; k < a[i].length; k++) {
+
+            if (query[k] === a[i][k]) {
+
+                count++;
+            }
+            if (count === 2) {
+                return i;
+            }
+        }
+
+    }
+    return -1;
+}
+
+
+try {
+
+
+
+} catch (err) {
+
+
+
+}
+

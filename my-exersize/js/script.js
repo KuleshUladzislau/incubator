@@ -253,7 +253,8 @@ try {
 
 
 
-// draw me a chessboard second commit 11.03.2023
+// draw me a chessboard second 
+// commit 11.03.2023
 
 function chessBoard(rows, columns) {
     let res = [];
@@ -284,5 +285,33 @@ function chessBoard(rows, columns) {
 
     }
     return res;
+}
+
+
+
+
+
+// Snakes & Ladders
+// las commit 11.03.2023
+
+
+var snakesAndLadders = function (board, dice) {
+
+    let position = board[0];
+    for (let i = 0; i < dice.length; i++) {
+
+        if (position + dice[i] < board.length) {
+            position += dice[i]
+        } if (position != 0) {
+            position += board[position]
+        }
+
+
+    }
+
+    return position
+
+
+
 }
 

@@ -315,3 +315,16 @@ var snakesAndLadders = function (board, dice) {
 
 }
 
+
+
+
+// first commit 12.03.2023
+
+
+// Unexpected parsing
+function getStatus(isBusy) {
+    var msg = (isBusy ? "busy" : "available");
+    return {
+        status: msg
+    }
+}

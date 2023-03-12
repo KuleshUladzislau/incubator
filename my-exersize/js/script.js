@@ -321,10 +321,41 @@ var snakesAndLadders = function (board, dice) {
 // first commit 12.03.2023
 
 
-// Unexpected parsing
+// Unexpected parsing 8 kuy
 function getStatus(isBusy) {
     var msg = (isBusy ? "busy" : "available");
     return {
         status: msg
     }
 }
+
+
+
+// second commit 12.03.2023
+
+
+
+// Moving Zeros To The End 5 kuy
+
+
+
+function moveZeros(arr) {
+    let count = 0;
+    let res = [];
+
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] !== 0) {
+            res.push(arr[i])
+        } else {
+            count++;
+
+        }
+    }
+
+    for (let i = 0; i < count; i++) {
+        res.push(0);
+    }
+    return res;
+}
+

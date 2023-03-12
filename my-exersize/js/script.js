@@ -359,3 +359,14 @@ function moveZeros(arr) {
     return res;
 }
 
+
+// last commit 12.03.2023
+
+// Is n divisible by x and y? 8kuy
+
+
+function isDivisible(n, x, y) {
+
+    return n % x === 0 && n % y === 0 ? true : false
+}
+

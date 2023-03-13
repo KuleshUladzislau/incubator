@@ -370,3 +370,38 @@ function isDivisible(n, x, y) {
     return n % x === 0 && n % y === 0 ? true : false
 }
 
+
+
+// first commit 13.03.2023
+
+//  Selective Array Reversing 6 kyu 
+
+function selReverse(array, length) {
+    let res = [];
+    let k = length;
+    if (length === 0 || length === 1) {
+        return array;
+    }
+    if (array.length === 0) {
+        return res
+    }
+    if (array.length === length) {
+        return array.reverse()
+    }
+
+    for (let i = 0; i < array.length; i = i + length) {
+        res.push(array.slice(i, k).reverse())
+        k = k + length;
+        console.log(res);
+    }
+
+    let total = res.toString().split(',').map(elem => +elem)
+
+
+
+
+
+    return total;
+
+}
+

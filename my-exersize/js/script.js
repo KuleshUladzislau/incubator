@@ -437,3 +437,27 @@ function formatWords(words) {
     return res
 
 }
+
+
+
+// last commmit 13.03.2023
+// Multiplication table 6 kyu
+
+
+
+function multiplicationTable(size) {
+    let res = [];
+
+
+    for (let j = 1; j <= size; j++) {
+        res[j] = new Array();
+        for (let k = 1; k <= size; k++) {
+            res[j].push((k * j));
+        }
+
+    }
+    res.shift();
+
+    return res;
+
+}

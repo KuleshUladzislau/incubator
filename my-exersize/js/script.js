@@ -405,3 +405,35 @@ function selReverse(array, length) {
 
 }
 
+// second commit 13.03.2023
+
+// Format words into a sentence 6 kyu 
+
+function formatWords(words) {
+
+    if (words === null || words === []) {
+        return '';
+    }
+    let str = words.filter(elem => elem !== "");
+    let res = '';
+
+
+
+    for (let i = 0; i < str.length; i++) {
+
+        if ((str.length - 1) === i) {
+            res += str[i]
+        }
+        else if ((str.length - 2) === i) {
+            res += str[i] + ' and '
+        }
+        else {
+            res += str[i] + ', ';
+        }
+
+
+
+    }
+    return res
+
+}
